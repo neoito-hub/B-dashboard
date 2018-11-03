@@ -11,6 +11,10 @@ const appRoutes: Routes = [
       {
         path: 'files',
         loadChildren: 'app/files/files.module#FilesModule'
+      },
+      {
+        path: 'kickoff',
+        loadChildren: 'app/container/kickoff/kickoff.module#KickoffModule'
       }
     ]
   },
