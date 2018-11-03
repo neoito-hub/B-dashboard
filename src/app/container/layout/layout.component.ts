@@ -18,13 +18,17 @@ export class LayoutComponent implements OnInit {
       },
       {
         id: 2,
-        menu: 'Product',
+        menu: 'E Form',
         icon: 'folder',
+        submenu: [
+          { name: 'New e-form', url: 'e-form' },
+          { name: 'E-Form list', url: 'e-form-list' }
+        ],
         url: '#'
       },
       {
         id: 3,
-        menu: 'Event',
+        menu: 'Kick Off',
         icon: 'group',
         url: '#'
       },

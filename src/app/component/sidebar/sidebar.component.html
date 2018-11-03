@@ -9,6 +9,9 @@
         {{item.icon}}
       </i>
       <p id="s-side">{{item.menu}}</p>
+      <ul *ngFor="let submenu of item?.submenu">
+        <p id="s-side">{{submenu.name}}</p>
+      </ul>
     </li>
     <li class="logout">
       <i class="material-icons">

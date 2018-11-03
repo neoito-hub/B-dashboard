@@ -13,6 +13,10 @@ const appRoutes: Routes = [
       }
     ]
   }
+  // {
+  //   path: 'e-form',
+  //   component: NewEFormComponent
+  // }
 ];
 
 @NgModule({
