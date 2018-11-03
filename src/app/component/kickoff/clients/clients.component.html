@@ -1,8 +1,18 @@
-<div class="main-clients">
-  <h2>Clients</h2>
-  <div class="card" *ngFor="let i of [1,2,3,4,5]; let index=index">
-    <span>{{index}}</span>
-    <span>Sneha</span>
-
+<div class="main-clients my-3">
+  <h2 class="my-1">Clients</h2>
+  <div class="card mt-3">
+    <div class="content" *ngFor="let i of [1,2,3,4,5]; let index=index">
+      <span>{{index}}</span>
+      <span>Sneha</span>
+    </div>
+    <div class="floating-button" data-toggle="modal" data-target="#newClientModalLong" (click)="addClieneModal()">
+      <i class="material-icons">add</i>
+    </div>
   </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="newClientModalLong" tabindex="-1" role="dialog" aria-labelledby="newClientModalLongTitle"
+  aria-hidden="true">
+  <app-new-client></app-new-client>
 </div>

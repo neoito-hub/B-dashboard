@@ -6,6 +6,8 @@ import { ClientsComponent } from '../../component/kickoff/clients/clients.compon
 import { RolesComponent } from '../../component/kickoff/roles/roles.component';
 import { ServicesComponent } from '../../component/kickoff/services/services.component';
 import { ResourcesComponent } from '../../component/kickoff/resources/resources.component';
+import { NewClientComponent } from '../../component/kickoff/clients/new-client/new-client.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', redirectTo: 'clients', pathMatch: 'full' },
@@ -15,13 +17,15 @@ const routes: Routes = [
   { path: 'resources', component: ResourcesComponent }
 ];
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, RouterModule.forChild(routes), ReactiveFormsModule],
   declarations: [
     KickoffComponent,
     ClientsComponent,
     RolesComponent,
     ServicesComponent,
-    ResourcesComponent
-  ]
+    ResourcesComponent,
+    NewClientComponent
+  ],
+  entryComponents: [NewClientComponent]
 })
 export class KickoffModule {}

@@ -31,10 +31,10 @@ export class LayoutComponent implements OnInit {
         menu: 'Kick Off',
         icon: 'group',
         submenu: [
-          { name: 'Clients', url: 'client' },
-          { name: 'Roles', url: 'roles' },
-          { name: 'Services', url: 'services' },
-          { name: 'Resources', url: 'resources' }
+          { name: 'Clients', url: 'kickoff/clients' },
+          { name: 'Roles', url: 'kickoff/roles' },
+          { name: 'Services', url: 'kickoff/services' },
+          { name: 'Resources', url: 'kickoff/resources' }
         ],
         url: '#'
       },

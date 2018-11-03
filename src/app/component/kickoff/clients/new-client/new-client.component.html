@@ -1,0 +1,23 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="newClirntModalLongTitle">Add new client</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="clientGroup">
+        <div class="form-group">
+          <label for="">Project name</label>
+          <div class="input-group">
+            <input formControlName="projectName" type="text" class="form-control" placeholder="Project name" aria-label="Project name"
+              aria-describedby="basic-addon1">
+          </div>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
