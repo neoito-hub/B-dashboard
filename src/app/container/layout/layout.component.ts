@@ -24,7 +24,7 @@ export class LayoutComponent implements OnInit {
       },
       {
         id: 3,
-        menu: 'Event',
+        menu: 'Kick Off',
         icon: 'group',
         url: '#'
       },
