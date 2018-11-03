@@ -29,7 +29,7 @@
   }
   li {
     padding: 16px 0px 14px 16px;
-    display: flex;
+    // display: flex;
   }
   p {
     display: none;
@@ -52,4 +52,13 @@
   padding: 0px 0px 0px 17px;
   font-size: 13px;
   transition: width 1s;
+}
+.s-nav-mainmenu {
+  display: flex;
+}
+.s-nav-submenu p {
+  padding: 14px 0px 0px 35px;
+}
+p:focus {
+  outline: none;
 }
