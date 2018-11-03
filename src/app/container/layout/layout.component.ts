@@ -30,6 +30,12 @@ export class LayoutComponent implements OnInit {
         id: 3,
         menu: 'Kick Off',
         icon: 'group',
+        submenu: [
+          { name: 'Clients', url: 'e-form' },
+          { name: 'Roles', url: 'e-form-list' },
+          { name: 'Services', url: 'e-form' },
+          { name: 'Resources', url: 'e-form-list' }
+        ],
         url: '#'
       },
       {
