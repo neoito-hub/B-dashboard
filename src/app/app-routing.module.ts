@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './container/layout/layout.component';
-import { NewEformComponent } from './component/new-eform/new-eform.component';
-import { EFormComponent } from './container/e-form/e-form.component';
+
+import { NewEformComponent } from './e-form/component/new-eform/new-eform.component';
+import { EFormComponent } from './e-form/container/e-form.component';
 
 const appRoutes: Routes = [
   {
@@ -12,12 +13,16 @@ const appRoutes: Routes = [
       {
         path: 'files',
         loadChildren: 'app/files/files.module#FilesModule'
+      },
+      {
+        path: 'e-form',
+        component: EFormComponent
+      },
+      {
+        path: 'create-e-form',
+        component: NewEformComponent
       }
     ]
-  },
-  {
-    path: 'e-form',
-    component: EFormComponent
   }
 ];
 
