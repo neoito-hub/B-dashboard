@@ -21,8 +21,8 @@ export class LayoutComponent implements OnInit {
         menu: 'E Form',
         icon: 'folder',
         submenu: [
-          { name: 'New e-form', url: 'e-form' },
-          { name: 'E-Form list', url: 'e-form-list' }
+          // { name: 'New e-form', url: 'e-form' },
+          // { name: 'E-Form list', url: 'e-form-list' }
         ],
         url: '#'
       },
@@ -31,10 +31,10 @@ export class LayoutComponent implements OnInit {
         menu: 'Kick Off',
         icon: 'group',
         submenu: [
-          { name: 'Clients', url: 'e-form' },
-          { name: 'Roles', url: 'e-form-list' },
-          { name: 'Services', url: 'e-form' },
-          { name: 'Resources', url: 'e-form-list' }
+          { name: 'Clients', url: 'client' },
+          { name: 'Roles', url: 'roles' },
+          { name: 'Services', url: 'services' },
+          { name: 'Resources', url: 'resources' }
         ],
         url: '#'
       },
