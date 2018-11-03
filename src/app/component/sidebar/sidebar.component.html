@@ -11,7 +11,7 @@
       <p id="s-side">{{item.menu}}</p>
       <div *ngIf="item?.submenu">
         <ul *ngFor="let submenu of item?.submenu">
-          <p id="s-side">{{submenu.name}}</p>
+          <p id="s-side" [routerLink]="[submenu?.url]">{{submenu.name}}</p>
         </ul>
       </div>
     </li>
