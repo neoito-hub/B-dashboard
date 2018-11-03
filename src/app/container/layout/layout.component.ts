@@ -28,15 +28,15 @@ export class LayoutComponent implements OnInit {
       },
       {
         id: 3,
-        menu: 'Event',
+        menu: 'Kick Off',
         icon: 'group',
         url: '#'
       },
       {
         id: 4,
-        menu: 'Settings',
-        icon: 'settings',
-        url: '#'
+        menu: 'Files',
+        icon: 'folder',
+        url: '/files'
       }
     ],
     breadcrumbs: [
