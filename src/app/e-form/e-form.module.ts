@@ -4,9 +4,11 @@ import { EFormRoutingModule } from './e-form-routing.module';
 import { EFormListComponent } from './component/e-form-list/e-form-list.component';
 import { NewEformComponent } from './component/new-eform/new-eform.component';
 import { EFormComponent } from './container/e-form.component';
+import { ImageUploadComponent } from './component/new-eform/image-upload/image-upload.component';
+import { ProposalComponent } from './component/new-eform/proposal/proposal.component';
 
 @NgModule({
   imports: [CommonModule, EFormRoutingModule],
-  declarations: [EFormComponent, EFormListComponent, NewEformComponent]
+  declarations: [EFormComponent, EFormListComponent, NewEformComponent, ImageUploadComponent, ProposalComponent]
 })
 export class EFormModule {}
