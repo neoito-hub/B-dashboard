@@ -4,7 +4,7 @@ import { EFormListComponent } from '../../component/e-form-list/e-form-list.comp
 
 const eformRoutes: Routes = [
   {
-    path: 'e-form-list',
+    path: '',
     component: EFormListComponent
   }
 ];

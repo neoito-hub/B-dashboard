@@ -10,7 +10,7 @@
       </i>
       <p id="s-side">{{item.menu}}</p>
       <ul *ngFor="let submenu of item?.submenu">
-        <p id="s-side">{{submenu.name}}</p>
+        <p id="s-side" [routerLink]="[submenu?.url]">{{submenu.name}}</p>
       </ul>
     </li>
     <li class="logout">
