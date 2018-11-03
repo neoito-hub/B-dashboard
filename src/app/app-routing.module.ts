@@ -7,6 +7,10 @@ const appRoutes: Routes = [
     path: '',
     component: LayoutComponent
   }
+  // {
+  //   path: 'e-form',
+  //   component: NewEFormComponent
+  // }
 ];
 
 @NgModule({
