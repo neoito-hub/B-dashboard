@@ -5,9 +5,10 @@ import { TopbarComponent } from '../../component/topbar/topbar.component';
 import { ContentComponent } from '../../component/content/content.component';
 import { LayoutComponent } from './layout.component';
 import { DashboardComponent } from '../../component/dashboard/dashboard.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule.forChild([])],
   declarations: [
     SidebarComponent,
     TopbarComponent,
