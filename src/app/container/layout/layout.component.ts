@@ -30,9 +30,9 @@ export class LayoutComponent implements OnInit {
       },
       {
         id: 4,
-        menu: 'Settings',
-        icon: 'settings',
-        url: '#'
+        menu: 'Files',
+        icon: 'folder',
+        url: '/files'
       }
     ],
     breadcrumbs: [

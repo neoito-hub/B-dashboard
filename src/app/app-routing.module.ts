@@ -5,7 +5,13 @@ import { LayoutComponent } from './container/layout/layout.component';
 const appRoutes: Routes = [
   {
     path: '',
-    component: LayoutComponent
+    component: LayoutComponent,
+    children: [
+      {
+        path: 'files',
+        loadChildren: 'app/files/files.module#FilesModule'
+      }
+    ]
   }
 ];
 
