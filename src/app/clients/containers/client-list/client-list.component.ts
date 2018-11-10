@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { ClientsListService } from '../../services/clients-list.service';
+import { Component, OnInit } from "@angular/core";
+import { ClientsListService } from "../../services/clients-list.service";
 
 @Component({
-  selector: 'app-client-list',
-  templateUrl: './client-list.component.html',
-  styleUrls: ['./client-list.component.css']
+  selector: "app-client-list",
+  templateUrl: "./client-list.component.html",
+  styleUrls: ["./client-list.component.scss"]
 })
 export class ClientListComponent implements OnInit {
   clientList: any;
-  constructor(private clientService: ClientsListService) { }
-  headers = ['Client Name', 'Project Name', 'Email', ' skype id'];
+  constructor(private clientService: ClientsListService) {}
+  headers = ["Client Name", "Project Name", "Email", " skype id"];
   ngOnInit() {
     this.clientService.getClientDetails().subscribe(list => {
       console.log(list);
@@ -20,6 +20,6 @@ export class ClientListComponent implements OnInit {
   clientDocuments(name) {
     this.clientService.getClientDocuments(name).subscribe(documents => {
       console.log(documents);
-    })
+    });
   }
 }
