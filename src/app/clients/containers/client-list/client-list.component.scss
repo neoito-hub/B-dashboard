@@ -19,6 +19,22 @@ tbody {
   tr.main-row {
     background-color: #e8e8e8;
 
+    &.active {
+      .file-list-wrap {
+        display: table-row;
+        height: auto;
+      }
+
+      tr {
+        border-left: 5px solid #f45f39;
+        background: #ffffff;
+        border-bottom: 1px solid #dee2e6;
+        border-right: 1px solid #dee2e6;
+      }
+    }
+
+
+
     &:nth-child(even) {
       background-color: #f2f2f2;
     }
@@ -27,14 +43,11 @@ tbody {
       margin: 0;
       padding: 0;
     }
-
-    &.active {
-      height: 200px;
-    }
   }
 
   .inner-row {
     width: 100%;
+    cursor: pointer;
   }
 
   .inner-row td {
@@ -51,4 +64,17 @@ tbody {
 
 .file-wrap {
   float: left;
+}
+
+.file-list-wrap {
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.file {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  display: none;
 }

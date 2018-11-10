@@ -10,6 +10,7 @@ export class ClientListComponent implements OnInit {
   clientList: any;
   constructor(private clientService: ClientsListService) {}
   headers = ["Client Name", "Project Name", "Email", " skype id"];
+  public currentName;
   ngOnInit() {
     this.clientService.getClientDetails().subscribe(list => {
       console.log(list);
@@ -17,10 +18,8 @@ export class ClientListComponent implements OnInit {
     });
   }
 
-  clientDocuments(name, event) {
-    event.target.parentElement.parentElement.parentElement.parentElement.classList.toggle(
-      "active"
-    );
+  clientDocuments(name) {
+    this.currentName = name;
     this.clientService.getClientDocuments(name).subscribe(documents => {
       console.log(documents);
     });

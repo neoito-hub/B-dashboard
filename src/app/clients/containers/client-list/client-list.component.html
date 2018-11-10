@@ -7,7 +7,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="main-row" *ngFor="let client of clientList" (click)="clientDocuments(client.cname,$event)">
+      <tr class="main-row" *ngFor="let client of clientList" (click)="clientDocuments(client.cname)" [class.active]="client.cname === currentName">
         <td colSpan="5">
           <table class="inner-row">
             <tr>
@@ -26,9 +26,16 @@
                     delete
                   </i>
                 </a>
+                <label for="upload">
+                  <i class="material-icons">
+                    add_circle
+                  </i>
+                </label>
+                <input type="file" name="" class="file" id="upload">
+
               </td>
             </tr>
-            <tr>
+            <tr class="file-list-wrap">
               <td colSpan="5">
                 <div class="file-list">
                   <label class="pull-left">1.Filename</label>
@@ -38,7 +45,7 @@
                 </div>
 
                 <div class="file-wrap">
-                  <input type="file" name="" id="">
+
                 </div>
               </td>
             </tr>
