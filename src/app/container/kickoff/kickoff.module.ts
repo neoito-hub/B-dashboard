@@ -9,6 +9,8 @@ import { ResourcesComponent } from '../../component/kickoff/resources/resources.
 import { NewClientComponent } from '../../component/kickoff/clients/new-client/new-client.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap';
+import { ClientService } from '../../component/kickoff/clients/client.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', redirectTo: 'clients', pathMatch: 'full' },
@@ -22,7 +24,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     ReactiveFormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    HttpClientModule
   ],
   declarations: [
     KickoffComponent,
@@ -32,6 +35,7 @@ const routes: Routes = [
     ResourcesComponent,
     NewClientComponent
   ],
+  providers: [ClientService],
   entryComponents: [NewClientComponent]
 })
 export class KickoffModule {}

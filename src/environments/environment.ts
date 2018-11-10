@@ -6,3 +6,8 @@
 export const environment = {
   production: false
 };
+
+export const API = 'http://localhost:3010/api/v0.1';
+
+export const API_ADD_CLIENT = `${API}/clients/add`;
+export const API_LIST_CLIENT = `${API}/clients/list`;

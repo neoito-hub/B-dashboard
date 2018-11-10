@@ -1,9 +1,28 @@
 <div class="main-clients my-3">
   <h2 class="my-1">Clients</h2>
   <div class="card mt-3">
-    <div class="content" *ngFor="let i of [1,2,3,4,5]; let index=index">
-      <span>{{index}}</span>
-      <span>Sneha</span>
+    <div class="content heading">
+      <span style="width:85px">Sl.no</span>
+      <div class="size-div">Project name</div>
+      <div class="size-div">Client name</div>
+      <div class="size-div">Services</div>
+      <div class="size-div">Resources</div>
+      <div class="size-div">Roles</div>
+      <div class="size-div-big">Responsible person</div>
+      <div class="size-div">PM tool</div>
+      <div class="size-div">Hrs per month</div>
+    </div>
+
+    <div class="content" *ngFor="let client of clients?.data; let index=index">
+      <span style="width:85px">{{index}}</span>
+      <div class="size-div">{{client.project_name ? client.project_name : '' }}</div>
+      <div class="size-div">{{client.client_name}}</div>
+      <div class="size-div"> <span *ngFor="let service of client.services_hired"> {{service}}</span></div>
+      <div class="size-div"> <span *ngFor="let resource of client.resources_allotted"> {{resource}}</span></div>
+      <div class="size-div"> <span *ngFor="let role of client.roles_hired"> {{role}}</span></div>
+      <div class="size-div-big">{{client.responsible_person?.person}}: {{client.responsible_person?.action}} </div>
+      <div class="size-div">{{client.pm_tool_used ? client.pm_tool_used : '' }}</div>
+      <div class="size-div">{{client.hours_per_month ? client.hours_per_month : '' }}</div>
     </div>
     <div class="floating-button" data-toggle="modal" (click)="addClieneModal()">
       <i class="material-icons">add</i>

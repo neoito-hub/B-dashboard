@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { NewClientComponent } from './new-client/new-client.component';
+import { ClientService } from './client.service';
 
 @Component({
   selector: 'app-clients',
@@ -8,23 +9,25 @@ import { NewClientComponent } from './new-client/new-client.component';
   styleUrls: ['./clients.component.css']
 })
 export class ClientsComponent implements OnInit {
+  clients: any;
   bsModalRef: BsModalRef;
-  constructor(public modalService: BsModalService) {}
+  constructor(
+    public modalService: BsModalService,
+    private clientService: ClientService
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.viewClients();
+  }
+
+  viewClients() {
+    this.clientService.allClients().subscribe(data => {
+      this.clients = data;
+      console.log(this.clients.data, 'List Data');
+    });
+  }
 
   addClieneModal() {
-    // this.addGuestModalRef = this.modalService.show(EditGuestComponent);
-    // const initialState = {
-    //   list: [
-    //     'Open a modal with component',
-    //     'Pass your data',
-    //     'Do something else',
-    //     '...'
-    //   ],
-    //   title: 'Modal with component'
-    // };
     this.bsModalRef = this.modalService.show(NewClientComponent);
-    // this.bsModalRef.content.closeBtnName = 'Close';
   }
 }
