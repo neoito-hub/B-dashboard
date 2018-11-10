@@ -4,6 +4,7 @@ import { LayoutComponent } from './container/layout/layout.component';
 
 import { NewEformComponent } from './e-form/component/new-eform/new-eform.component';
 import { EFormComponent } from './e-form/container/e-form.component';
+import { RolesComponent } from './e-form/component/roles/roles.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
       {
         path: 'create-e-form',
         component: NewEformComponent
+      },
+      {
+        path: 'roles',
+        component: RolesComponent
       }
     ]
   }

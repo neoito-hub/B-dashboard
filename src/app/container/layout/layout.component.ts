@@ -22,7 +22,8 @@ export class LayoutComponent implements OnInit {
         icon: 'folder',
         submenu: [
           { name: 'New e-form', url: '/create-e-form' },
-          { name: 'E-Form list', url: '/e-form' }
+          { name: 'E-Form list', url: '/e-form' },
+          { name: 'E-Form roles', url: '/roles' }
         ],
         url: '#'
       },

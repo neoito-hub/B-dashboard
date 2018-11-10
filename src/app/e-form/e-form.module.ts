@@ -6,9 +6,18 @@ import { NewEformComponent } from './component/new-eform/new-eform.component';
 import { EFormComponent } from './container/e-form.component';
 import { ImageUploadComponent } from './component/new-eform/image-upload/image-upload.component';
 import { ProposalComponent } from './component/new-eform/proposal/proposal.component';
+import { RolesComponent } from './component/roles/roles.component';
 
 @NgModule({
   imports: [CommonModule, EFormRoutingModule],
-  declarations: [EFormComponent, EFormListComponent, NewEformComponent, ImageUploadComponent, ProposalComponent]
+  declarations: [
+    EFormComponent,
+    EFormListComponent,
+    NewEformComponent,
+    ImageUploadComponent,
+    ProposalComponent,
+    RolesComponent
+  ],
+  providers: []
 })
 export class EFormModule {}
