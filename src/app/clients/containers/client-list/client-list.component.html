@@ -1,0 +1,19 @@
+<div class="content table-responsive table-full-width">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th *ngFor="let cell of headers">{{ cell }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clientList">
+        <td>{{client?.cname}}</td>
+        <td>{{client?.pname}}</td>
+        <td>{{client?.email}}</td>
+        <td>{{client?.skypeid}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+
+</div>

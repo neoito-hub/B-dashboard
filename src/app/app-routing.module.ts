@@ -8,8 +8,8 @@ const appRoutes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: 'files',
-        loadChildren: 'app/files/files.module#FilesModule'
+        path: 'clients',
+        loadChildren: 'app/clients/clients.module#ClientsModule'
       }
     ]
   }
