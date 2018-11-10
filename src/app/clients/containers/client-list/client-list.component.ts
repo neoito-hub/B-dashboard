@@ -8,12 +8,18 @@ import { ClientsListService } from '../../services/clients-list.service';
 })
 export class ClientListComponent implements OnInit {
   clientList: any;
-  constructor(private clientService: ClientsListService) {}
+  constructor(private clientService: ClientsListService) { }
   headers = ['Client Name', 'Project Name', 'Email', ' skype id'];
   ngOnInit() {
     this.clientService.getClientDetails().subscribe(list => {
       console.log(list);
       this.clientList = list;
     });
+  }
+
+  clientDocuments(name) {
+    this.clientService.getClientDocuments(name).subscribe(documents => {
+      console.log(documents);
+    })
   }
 }

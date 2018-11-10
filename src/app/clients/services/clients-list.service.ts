@@ -12,12 +12,12 @@ export class ClientsListService {
   clientDocuments = [
     {
       cname: 'rakesh', documents: [
-        { docId: '1', docName: 'BRD', docLink: '' }, { docId: '2', docName: 'FRD', docLink: '' }
+        { id: '1', name: 'BRD', url: '' }, { id: '2', name: 'FRD', url: '' }
       ]
     },
     {
       cname: 'sura', documents: [
-        { docId: '1', docName: 'BRD', docLink: '' }, { docId: '2', docName: 'FRD', docLink: '' }
+        { id: '1', name: 'BRD', url: '' }, { id: '2', name: 'FRD', url: '' }
       ]
     }
   ];
@@ -36,7 +36,7 @@ export class ClientsListService {
     // );
   }
   getClientDocuments(name): Observable<any> {
-    let documents = this.clientDocuments.filter(element => { element.cname == name });
+    let documents = this.clientDocuments.filter(element => element.cname == name);
     return Observable.create(observer => {
       observer.next(documents);
       observer.complete();
