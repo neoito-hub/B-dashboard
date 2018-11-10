@@ -8,10 +8,13 @@
       align-items: center;
       select {
         margin-left: 16px;
-        background: #f45f39;
+        background: transparent;
         border: none;
-        padding: 10px 11px 10px 11px;
-        color: white;
+        padding: 8px 11px 8px 3px;
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 5px 5px 5px 4px;
+        font-size: 14px;
       }
     }
     .roles-add {
@@ -27,4 +30,40 @@
       }
     }
   }
+  .role-list {
+    .card {
+      margin-top: 15px;
+    }
+  }
+}
+
+.submit-button button {
+  background: blue;
+  border: none;
+  color: white;
+  padding: 6px 19px 6px 19px;
+  font-size: 16px;
+  margin-top: 42px;
+  float: right;
+}
+.add-button,
+.delete-button {
+  // padding-left: 0px;
+  // padding-right: 0px;
+  display: flex;
+  justify-content: center;
+}
+.add-button button {
+  background: green;
+  border: none;
+  padding: 7px 12px 7px 11px;
+  color: white;
+  width: 39px;
+}
+.delete-button button {
+  background: red;
+  border: none;
+  padding: 7px 12px 7px 11px;
+  color: white;
+  width: 39px;
 }
