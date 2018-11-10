@@ -1,0 +1,57 @@
+<main class="roles">
+  <div class="card">
+    <div class="roles-select">
+      <h5>Roles and responsibility:</h5>
+      <select class="selectpicker">
+        <option>UI Developer</option>
+        <option>Project manager</option>
+      </select>
+    </div>
+
+    <div class="roles-add">
+      <button type="button" data-toggle="modal" data-target="#myModal">
+        &#x2b;
+      </button>
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="addRole" (ngSubmit)="addroles(addRole)">
+              <div class="form-group">
+                <label for="usr">Name:</label>
+                <input type="text" class="form-control" id="name" formControlName="name" />
+              </div>
+              <div class="form-group">
+                <label for="responsibilities">Responsibilities</label>
+                <div class="row">
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="responsibilities" formControlName="responsibilities" />
+                  </div>
+                  <div class="col-sm-1 add-button">
+                    <button> &#10133;</button>
+                  </div>
+                  <div class="col-sm-1 delete-button">
+                    <button>&#x2716;</button>
+                  </div>
+                </div>
+              </div>
+              <div class="submit-button">
+                <button>Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="role-list">
+    <div class="card">lll</div>
+  </div>
+</main>

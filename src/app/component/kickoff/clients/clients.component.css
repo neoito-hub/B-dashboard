@@ -1,0 +1,39 @@
+.content {
+  border-bottom: 1px solid #9c9c9c45;
+  color: black;
+  padding: 18px;
+  display: flex;
+  flex-flow: row;
+
+}
+
+.heading {
+  font-weight: 600;
+}
+
+.floating-button {
+  background: #f45f39;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  text-align: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+}
+
+i {
+  font-size: 24px;
+  margin-top: 16px;
+}
+
+.size-div {
+  width: 20%;
+}
+
+.size-div-big {
+  width: 30%;
+}
