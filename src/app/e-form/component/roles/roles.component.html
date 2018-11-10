@@ -1,0 +1,50 @@
+<main class="roles">
+  <div class="card">
+    <div class="roles-select">
+      <h5>Roles and responsibility:</h5>
+      <select class="selectpicker">
+        <option>UI Developer</option>
+        <option>Project manager</option>
+      </select>
+    </div>
+
+    <!-- <div class="roles-add"><button>+</button></div> -->
+
+    <div class="roles-add">
+      <button type="button" data-toggle="modal" data-target="#myModal">
+        +
+      </button>
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <!-- <h4 class="modal-title">Modal Header</h4> -->
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="usr">Name:</label>
+                <input type="text" class="form-control" id="usr" />
+              </div>
+              <div class="form-group">
+                <label for="pwd">Responsibilities</label>
+                <div class="row">
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control" id="pwd" />
+                  </div>
+                  <div class="col-sm-4"><button>+</button></div>
+                </div>
+              </div>
+              <div><button>Submit</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

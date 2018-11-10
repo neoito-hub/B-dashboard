@@ -1,0 +1,30 @@
+.roles {
+  margin-top: 17px;
+  .card {
+    padding: 15px;
+    width: fit-content;
+    .roles-select {
+      display: flex;
+      align-items: center;
+      select {
+        margin-left: 16px;
+        background: #f45f39;
+        border: none;
+        padding: 10px 11px 10px 11px;
+        color: white;
+      }
+    }
+    .roles-add {
+      button {
+        background: blue;
+        border: none;
+        color: white;
+        padding: 0px 14px 2px 13px;
+        border-radius: 50%;
+        font-size: 28px;
+        margin-top: 42px;
+        float: right;
+      }
+    }
+  }
+}
