@@ -1,5 +1,5 @@
 <div class="content table-responsive table-full-width">
-  <table class="table table-striped">
+  <table class="table">
     <thead>
       <tr>
         <th *ngFor="let cell of headers">{{ cell }}</th>
@@ -7,22 +7,42 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let client of clientList" (click)="clientDocuments(client.cname)">
-        <td>{{client?.cname}}</td>
-        <td>{{client?.pname}}</td>
-        <td>{{client?.email}}</td>
-        <td>{{client?.skypeid}}</td>
-        <td>
-          <a href="">
-            <i class="material-icons">
-              edit
-            </i>
-          </a>
-          <a href="">
-            <i class="material-icons">
-              delete
-            </i>
-          </a>
+      <tr class="main-row" *ngFor="let client of clientList" (click)="clientDocuments(client.cname,$event)">
+        <td colSpan="5">
+          <table class="inner-row">
+            <tr>
+              <td>{{client?.cname}}</td>
+              <td>{{client?.pname}}</td>
+              <td>{{client?.email}}</td>
+              <td>{{client?.skypeid}}</td>
+              <td>
+                <a href="">
+                  <i class="material-icons">
+                    edit
+                  </i>
+                </a>
+                <a href="">
+                  <i class="material-icons">
+                    delete
+                  </i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td colSpan="5">
+                <div class="file-list">
+                  <label class="pull-left">1.Filename</label>
+                  <i class="material-icons pull-left">
+                    attach_file
+                  </i>
+                </div>
+
+                <div class="file-wrap">
+                  <input type="file" name="" id="">
+                </div>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
     </tbody>

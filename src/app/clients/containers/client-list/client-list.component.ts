@@ -17,7 +17,10 @@ export class ClientListComponent implements OnInit {
     });
   }
 
-  clientDocuments(name) {
+  clientDocuments(name, event) {
+    event.target.parentElement.parentElement.parentElement.parentElement.classList.toggle(
+      "active"
+    );
     this.clientService.getClientDocuments(name).subscribe(documents => {
       console.log(documents);
     });

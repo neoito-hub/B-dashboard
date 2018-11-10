@@ -6,3 +6,42 @@ a {
   color: #000000;
   margin-right: 10px;
 }
+
+thead {
+  th {
+    width: 20%;
+  }
+}
+
+tbody {
+  tr.main-row {
+    td {
+      margin: 0;
+      padding: 0;
+    }
+
+    &.active {
+      height: 200px;
+    }
+  }
+
+  .inner-row {
+    width: 100%;
+    background-color: #eeeeee;
+  }
+
+  .inner-row td {
+    width: 20%;
+    padding: 0.75rem !important;
+    ;
+  }
+}
+
+.file-list {
+  float: left;
+  width: 20%
+}
+
+.file-wrap {
+  float: left;
+}
