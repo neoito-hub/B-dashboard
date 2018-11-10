@@ -10,19 +10,23 @@
     <div class="form-group">
       <label for="">Project name</label>
       <div class="input-group">
-        <input formControlName="project_name" type="text" class="form-control" placeholder="Project name" aria-label="Project name"
+        <input [ngClass]="{ 'invalid' : clientGroup.get('project_name').hasError('required') && clientGroup.get('project_name').touched }"
+          formControlName="project_name" type="text" class="form-control" placeholder="Project name" aria-label="Project name"
           aria-describedby="basic-addon1">
       </div>
-      <span class="text-danger" *ngIf="clientGroup.get('project_name').hasError('required')">Project name is required</span>
+      <span class="error-msg" *ngIf="clientGroup.get('project_name').hasError('required') && clientGroup.get('project_name').touched">Project
+        name is required</span>
     </div>
 
     <div class="form-group">
       <label for="">Client name</label>
       <div class="input-group">
-        <input formControlName="client_name" type="text" class="form-control" placeholder="Client name" aria-label="Client name"
+        <input [ngClass]="{ 'invalid' : clientGroup.get('client_name').hasError('required') && clientGroup.get('client_name').touched }"
+          formControlName="client_name" type="text" class="form-control" placeholder="Client name" aria-label="Client name"
           aria-describedby="basic-addon1">
       </div>
-      <span class="text-danger" *ngIf="clientGroup.get('client_name').hasError('required')">Project name is required</span>
+      <span class="error-msg" *ngIf="clientGroup.get('client_name').hasError('required') && clientGroup.get('client_name').touched">Project
+        name is required</span>
     </div>
 
     <div class="form-group">
@@ -135,6 +139,15 @@
         </div>
       </div>
     </div>
+    <div class="form-group">
+      <label for="">File upload</label>
+      <div class="input-group">
+        <input type="file" ng2FileSelect [uploader]="uploader" />
+      </div>
+    </div>
+    <button type="button" class="btn btn-success btn-xs" (click)="upload(uploader)">
+      <span class="glyphicon glyphicon-upload"></span> Upload
+    </button>
   </form>
 
 </div>

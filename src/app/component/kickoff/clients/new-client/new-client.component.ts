@@ -2,6 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 import { ClientService } from '../client.service';
+// import { FileUploader } from 'ng2-file-upload';
+
+import {
+  FileSelectDirective,
+  FileDropDirective,
+  FileUploader
+} from 'ng2-file-upload/ng2-file-upload';
+import { API_FILE_UPLOAD } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-new-client',
@@ -10,6 +18,9 @@ import { ClientService } from '../client.service';
 })
 export class NewClientComponent implements OnInit {
   clientGroup: FormGroup;
+  public uploader: FileUploader = new FileUploader({
+    url: API_FILE_UPLOAD
+  });
 
   constructor(
     private fb: FormBuilder,
@@ -20,6 +31,14 @@ export class NewClientComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
+    this.uploader.onAfterAddingFile = file => {
+      file.withCredentials = false;
+    };
+
+    this.uploader.onCompleteItem = (item, response, status, header) => {
+      console.log(header);
+      console.log(response);
+    };
   }
   buildForm() {
     this.clientGroup = this.fb.group({
@@ -49,8 +68,6 @@ export class NewClientComponent implements OnInit {
   //   });
   // }
   addClient(form) {
-    console.log(form, 'FOrm');
-
     if (form.valid) {
       this.clientService.addClient(form.value).subscribe(val => {
         console.log(val);
@@ -62,5 +79,11 @@ export class NewClientComponent implements OnInit {
         control.markAsTouched({ onlySelf: true });
       });
     }
+  }
+
+  upload(item: any) {
+    console.log(this.uploader, 'Uploader');
+
+    item.queue[0].upload();
   }
 }

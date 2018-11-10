@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap';
 import { ClientService } from '../../component/kickoff/clients/client.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FileUploadModule } from 'ng2-file-upload';
 
 const routes: Routes = [
   { path: '', redirectTo: 'clients', pathMatch: 'full' },
@@ -25,7 +26,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     ReactiveFormsModule,
     ModalModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    FileUploadModule
   ],
   declarations: [
     KickoffComponent,
