@@ -1,0 +1,13 @@
+main {
+  margin-top: 3em;
+}
+.tabs-selection {
+  display: flex;
+}
+.tabs {
+  padding: 15px 27px 15px 15px;
+  font-size: 16px;
+  color: black;
+}
+.tab1 {
+}

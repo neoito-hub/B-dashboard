@@ -1,0 +1,16 @@
+<main>
+  <div class="tabs-selection">
+    <div (click)="isSelected(1)" (click)="setTab(1)" class="tabs tab1">
+      Image Upload
+    </div>
+    <div (click)="isSelected(2)" (click)="setTab(2)" class="tabs tab2">
+      Proposal
+    </div>
+  </div>
+
+  <div [ngSwitch]="tab">
+    <div *ngSwitchDefault><app-image-upload></app-image-upload></div>
+    <div *ngSwitchCase="1"><app-image-upload></app-image-upload></div>
+    <div *ngSwitchCase="2"><app-proposal></app-proposal></div>
+  </div>
+</main>
