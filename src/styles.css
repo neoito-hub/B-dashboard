@@ -3,7 +3,6 @@ body {
   margin: 0px;
   font-family: 'Open Sans', sans-serif;
 }
-
-.pull-left {
-  float: left;
+:focus {
+  outline: none;
 }
