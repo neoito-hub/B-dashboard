@@ -5,13 +5,15 @@
       <img src="assets/images/logo.png">
     </li>
     <li *ngFor="let item of menu.items">
-      <i class="material-icons">
-        {{item.icon}}
-      </i>
-      <p id="s-side">{{item.menu}}</p>
-      <ul *ngFor="let submenu of item?.submenu">
-        <p id="s-side">{{submenu.name}}</p>
-      </ul>
+      <div class="s-nav-mainmenu">
+        <i class="material-icons">
+          {{item.icon}}
+        </i>
+        <p id="s-side">{{item.menu}}</p>
+      </div>
+      <div *ngFor="let submenu of item?.submenu" class="s-nav-submenu">
+        <p id="s-side" [routerLink]="[submenu?.url]">{{submenu.name}}</p>
+      </div>
     </li>
     <li class="logout">
       <i class="material-icons">
