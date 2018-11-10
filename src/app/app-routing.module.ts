@@ -26,6 +26,10 @@ const appRoutes: Routes = [
       {
         path: 'roles',
         component: RolesComponent
+      },
+      {
+        path: 'kickoff',
+        loadChildren: 'app/container/kickoff/kickoff.module#KickoffModule'
       }
     ]
   }

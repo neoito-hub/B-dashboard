@@ -1,0 +1,144 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">Add new client</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="clientGroup">
+
+    <div class="form-group">
+      <label for="">Project name</label>
+      <div class="input-group">
+        <input formControlName="project_name" type="text" class="form-control" placeholder="Project name" aria-label="Project name"
+          aria-describedby="basic-addon1">
+      </div>
+      <span class="text-danger" *ngIf="clientGroup.get('project_name').hasError('required')">Project name is required</span>
+    </div>
+
+    <div class="form-group">
+      <label for="">Client name</label>
+      <div class="input-group">
+        <input formControlName="client_name" type="text" class="form-control" placeholder="Client name" aria-label="Client name"
+          aria-describedby="basic-addon1">
+      </div>
+      <span class="text-danger" *ngIf="clientGroup.get('client_name').hasError('required')">Project name is required</span>
+    </div>
+
+    <div class="form-group">
+      <label for="">Services</label>
+      <div class="input-group">
+        <select formControlName="services_hired" name="" id="" class="form-control">
+          <option value="Service1">Service 1</option>
+          <option value="Service  2">Service 2</option>
+          <option value="Service  3">Service 3</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Roles</label>
+      <div class="input-group">
+        <select formControlName="roles_hired" name="" id="" class="form-control">
+          <option value="Roles 1">Roles 1</option>
+          <option value="Roles 2">Roles 2</option>
+          <option value="Roles 3">Roles 3</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Resource</label>
+      <div class="input-group">
+        <select formControlName="resources_allotted" name="" id="" class="form-control">
+          <option value="Resource 1">Resource 1</option>
+          <option value="Resource 2">Resource 2</option>
+          <option value="Resource 3">Resource 3</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Hours per month</label>
+      <div class="input-group">
+        <input formControlName="hours_per_month" type="time" class="form-control" placeholder="Hours per month"
+          aria-label="Hours per month" aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+    <div formGroupName="daily_working_hours">
+
+      <label for="">Daily working hours</label>
+      <div>
+        <div class="form-group">
+          <label for="">From</label>
+          <div class="input-group">
+            <input formControlName="from" type="time" class="form-control" placeholder="Hours per month" aria-label="Hours per month"
+              aria-describedby="basic-addon1">
+            <!-- <select formControlName="from" name="" id="" class="form-control">
+              <option value="1 Hr">1 Hr</option>
+              <option value="2 Hr">2 Hr</option>
+              <option value="3 Hr">3 Hr</option>
+            </select> -->
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="">To</label>
+          <div class="input-group">
+            <input formControlName="to" type="time" class="form-control" placeholder="Hours per month" aria-label="Hours per month"
+              aria-describedby="basic-addon1">
+            <!-- <select formControlName="to" name="" id="" class="form-control">
+              <option value="1 Hr 30 mins">1 Hr 30 mins</option>
+              <option value="2 Hr 30 mins">2 Hr 30 mins</option>
+              <option value="3 Hr 30 mins">3 Hr 30 mins</option>
+            </select> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="">Delivery date</label>
+      <div class="input-group">
+        <input formControlName="delivery_date" type="date" class="form-control" placeholder="Delivery date" aria-label="Delivery date"
+          aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">PM tool</label>
+      <div class="input-group">
+        <select formControlName="pm_tool_used" name="" id="" class="form-control">
+          <option value="Tool 1">Tool 1</option>
+          <option value="Tool 2">Tool 2</option>
+          <option value="Tool 3">Tool 3</option>
+        </select>
+      </div>
+    </div>
+
+    <div formGroupName="responsible_person">
+      <div class="form-group">
+        <label for="">Next Action</label>
+        <div class="input-group">
+          <input formControlName="action" type="text" class="form-control" placeholder="Next Action" aria-label="Next Action"
+            aria-describedby="basic-addon1">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="">Responsible Person</label>
+        <div class="input-group">
+          <input formControlName="person" type="text" class="form-control" placeholder="Responsible Person" aria-label="Next Action"
+            aria-describedby="basic-addon1">
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary" (click)="addClient(clientGroup)">Submit</button>
+</div>
+<!-- </div> -->

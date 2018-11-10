@@ -1,0 +1,8 @@
+.modal-dialog {
+  color: black;
+  max-width: 650px;
+}
+
+.modal-footer {
+  border-top: none;
+}
