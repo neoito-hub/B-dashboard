@@ -10,17 +10,18 @@ body {
   padding: 1.2rem 1.85rem;
 }
 
+.form-group {
+  float: left;
+  width: 43.69%;
+  margin: 0 12px 1rem;
+}
 
-
-.form-group,
 label {
   margin-bottom: 0.4rem;
   font-size: 0.85rem;
   font-weight: 700;
-  text-transform: lowercase;
 }
 
-.form-group,
 input {
   padding: .6rem .75rem;
   font-size: 0.85rem;
@@ -29,7 +30,6 @@ input {
   height: 36px;
 }
 
-.form-group,
 .error-msg {
   color: #f52a44;
   font-size: 0.85rem;

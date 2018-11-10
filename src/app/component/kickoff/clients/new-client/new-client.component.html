@@ -1,23 +1,126 @@
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="newClirntModalLongTitle">Add new client</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form [formGroup]="clientGroup">
-        <div class="form-group">
-          <label for="">Project name</label>
-          <div class="input-group">
-            <input formControlName="projectName" type="text" class="form-control" placeholder="Project name" aria-label="Project name"
-              aria-describedby="basic-addon1">
-          </div>
-        </div>
-      </form>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Submit</button>
+<!-- <div class="modal-dialog" role="document"> -->
+<!-- <div class="modal-content"> -->
+<div class="modal-header">
+  <h4 class="modal-title pull-left">Add new client</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<!-- <div class="modal-header">
+  <h5 class="modal-title" id="newClientModalLongTitle"></h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div> -->
+<div class="modal-body">
+  <form [formGroup]="clientGroup">
+
+    <div class="form-group">
+      <label for="">Project name</label>
+      <div class="input-group">
+        <input formControlName="projectName" type="text" class="form-control" placeholder="Project name" aria-label="Project name"
+          aria-describedby="basic-addon1">
       </div>
     </div>
-  </div>
+
+    <div class="form-group">
+      <label for="">Client name</label>
+      <div class="input-group">
+        <input formControlName="clientName" type="text" class="form-control" placeholder="Client name" aria-label="Client name"
+          aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Services</label>
+      <div class="input-group">
+        <select formControlName="service" name="" id="" class="form-control">
+          <option value="1">Service 1</option>
+          <option value="2">Service 1</option>
+          <option value="3">Service 1</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Roles</label>
+      <div class="input-group">
+        <select formControlName="roles" name="" id="" class="form-control">
+          <option value="1">Roles 1</option>
+          <option value="2">Roles 1</option>
+          <option value="3">Roles 1</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Resource</label>
+      <div class="input-group">
+        <select formControlName="resource" name="" id="" class="form-control">
+          <option value="1">Resource 1</option>
+          <option value="2">Resource 1</option>
+          <option value="3">Resource 1</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Daily working hours</label>
+      <div class="input-group">
+        <select formControlName="dailyHours" name="" id="" class="form-control">
+          <option value="">1 Hr 30 mins</option>
+          <option value="2">1 Hr 30 mins</option>
+          <option value="3">1 Hr 30 mins</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Hours per month</label>
+      <div class="input-group">
+        <input formControlName="hoursPerMonth" type="time" class="form-control" placeholder="Hours per month"
+          aria-label="Hours per month" aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Delivery date</label>
+      <div class="input-group">
+        <input formControlName="deliveryDate" type="date" class="form-control" placeholder="Delivery date" aria-label="Delivery date"
+          aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">PM tool</label>
+      <div class="input-group">
+        <select formControlName="pmTool" name="" id="" class="form-control">
+          <option value="1">Tool 1</option>
+          <option value="2">Tool 1</option>
+          <option value="3">Tool 1</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Next Action</label>
+      <div class="input-group">
+        <input formControlName="nextAction" type="text" class="form-control" placeholder="Next Action" aria-label="Next Action"
+          aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="">Responsible Person</label>
+      <div class="input-group">
+        <input formControlName="responsiblePerson" type="text" class="form-control" placeholder="Responsible Person"
+          aria-label="Next Action" aria-describedby="basic-addon1">
+      </div>
+    </div>
+  </form>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary">Submit</button>
+</div>
+<!-- </div> -->

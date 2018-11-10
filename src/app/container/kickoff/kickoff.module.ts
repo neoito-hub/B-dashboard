@@ -8,6 +8,7 @@ import { ServicesComponent } from '../../component/kickoff/services/services.com
 import { ResourcesComponent } from '../../component/kickoff/resources/resources.component';
 import { NewClientComponent } from '../../component/kickoff/clients/new-client/new-client.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap';
 
 const routes: Routes = [
   { path: '', redirectTo: 'clients', pathMatch: 'full' },
@@ -17,7 +18,12 @@ const routes: Routes = [
   { path: 'resources', component: ResourcesComponent }
 ];
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(routes), ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    ReactiveFormsModule,
+    ModalModule.forRoot()
+  ],
   declarations: [
     KickoffComponent,
     ClientsComponent,
